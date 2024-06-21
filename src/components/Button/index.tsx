@@ -2,9 +2,14 @@ import "./styles.css";
 
 interface ButtonProps {
   children: React.ReactNode;
-  blue?: boolean;
+  secondary?: boolean;
+  onClick?: () => void;
 }
 
-export function Button({ children, blue }: ButtonProps) {
-  return <button>{children}</button>;
+export function Button({ children, secondary, onClick }: ButtonProps) {
+  return (
+    <button className={secondary ? "btn-secondary" : "btn"} onClick={onClick}>
+      {children}
+    </button>
+  );
 }

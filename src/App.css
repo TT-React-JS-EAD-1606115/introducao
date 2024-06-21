@@ -10,3 +10,9 @@
 .italic {
   font-style: italic;
 }
+
+.button-container {
+  display: flex;
+  gap: 2rem;
+  margin-left: 5rem;
+}
